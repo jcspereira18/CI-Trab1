@@ -13,6 +13,11 @@
 #define MIN_START_ADDR 0x0000 //Min starting address
 #define MAX_START_ADDR 0xFFFF //Max starting address
 
-int read_h_regs( char *server_add, int port, __uint16_t st_r, __uint16_t n_r, __uint16_t *val );
+#define FC_READ 0x03 //3
+#define FC_WRITE 0x10 //16
 
-int write_multiple_regs( char *server_add, int port, __uint16_t st_r, __uint16_t n_r, __uint16_t *val );
+int read_h_regs( char *server_add, __uint16_t start_addr, __uint16_t n_reg );
+
+int write_multiple_regs( char *server_add, __uint16_t start_addr, __uint16_t n_r, __uint16_t *val );
+
+#endif

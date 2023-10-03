@@ -4,5 +4,9 @@
 
 #include<unistd.h>
 
+#define PORT 502
+#define MBAP_LEN 7
 
-int send_modbus_request( char *server_add, __uint8_t *APDU, __uint16_t *APDUlen, __uint8_t *APDU_R );
+int send_modbus_request( char *server_add, __uint8_t *APDU, __uint16_t APDUlen, __uint8_t *APDU_R );
+
+#endif

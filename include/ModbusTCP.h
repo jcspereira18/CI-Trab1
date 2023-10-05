@@ -2,7 +2,14 @@
 #ifndef MODBUS_TCP
 #define MODBUS_TCP
 
-#include<unistd.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <sys/types.h>
+#include <arpa/inet.h>
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+
 
 #define PORT 502
 #define MBAP_LEN 7
